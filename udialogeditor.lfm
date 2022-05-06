@@ -1,0 +1,503 @@
+object Form1: TForm1
+  Left = 320
+  Height = 579
+  Top = 137
+  Width = 813
+  Caption = 'Dialog Node Editor'
+  ClientHeight = 559
+  ClientWidth = 813
+  Menu = MainMenu1
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '2.2.0.4'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 536
+    Width = 813
+    Panels = <    
+      item
+        Width = 400
+      end    
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 536
+    Top = 0
+    Width = 264
+    Align = alLeft
+    ClientHeight = 536
+    ClientWidth = 264
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Left = 1
+      Height = 325
+      Top = 1
+      Width = 262
+      Align = alTop
+      AutoSize = True
+      Caption = 'Main Attributes'
+      ClientHeight = 305
+      ClientWidth = 258
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 258
+        Align = alTop
+        Caption = 'Node ID'
+      end
+      object edNodeId: TEdit
+        Left = 0
+        Height = 23
+        Top = 15
+        Width = 258
+        Align = alTop
+        TabOrder = 0
+      end
+      object Label2: TLabel
+        Left = 0
+        Height = 15
+        Top = 38
+        Width = 258
+        Align = alTop
+        Caption = 'Node Text'
+      end
+      object memoNodeText: TMemo
+        Left = 0
+        Height = 195
+        Top = 53
+        Width = 258
+        Align = alTop
+        ScrollBars = ssVertical
+        TabOrder = 1
+      end
+      object Label3: TLabel
+        Left = 0
+        Height = 15
+        Top = 248
+        Width = 258
+        Align = alTop
+        Caption = 'Portrait ID'
+      end
+      object edPortId: TEdit
+        Left = 0
+        Height = 23
+        Top = 263
+        Width = 258
+        Align = alTop
+        TabOrder = 2
+      end
+      object cbCanLeave: TCheckBox
+        Left = 0
+        Height = 19
+        Top = 286
+        Width = 258
+        Align = alTop
+        Caption = 'Can Leave'
+        TabOrder = 3
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 1
+      Height = 184
+      Top = 326
+      Width = 262
+      Align = alClient
+      Caption = 'User Lines'
+      ClientHeight = 164
+      ClientWidth = 258
+      TabOrder = 1
+      object lbULines: TListBox
+        Left = 0
+        Height = 114
+        Top = 50
+        Width = 258
+        Align = alClient
+        ItemHeight = 0
+        OnClick = lbULinesClick
+        TabOrder = 0
+      end
+      object Panel3: TPanel
+        Left = 0
+        Height = 50
+        Top = 0
+        Width = 258
+        Align = alTop
+        ClientHeight = 50
+        ClientWidth = 258
+        TabOrder = 1
+        object bAddLine: TButton
+          Left = 1
+          Height = 48
+          Top = 1
+          Width = 55
+          Align = alLeft
+          Caption = 'Add'
+          OnClick = bAddLineClick
+          TabOrder = 0
+        end
+        object bRemLine: TButton
+          Left = 56
+          Height = 48
+          Top = 1
+          Width = 55
+          Align = alLeft
+          Caption = 'Remove'
+          OnClick = bRemLineClick
+          TabOrder = 1
+        end
+        object bUpLine: TButton
+          Left = 111
+          Height = 48
+          Top = 1
+          Width = 55
+          Align = alLeft
+          Caption = 'Up'
+          OnClick = bUpLineClick
+          TabOrder = 2
+        end
+        object bDownLine: TButton
+          Left = 166
+          Height = 48
+          Top = 1
+          Width = 55
+          Align = alLeft
+          Caption = 'Down'
+          OnClick = bDownLineClick
+          TabOrder = 3
+        end
+      end
+    end
+    object bSaveNode: TButton
+      Left = 1
+      Height = 25
+      Top = 510
+      Width = 262
+      Align = alBottom
+      Caption = 'Save Node'
+      TabOrder = 2
+    end
+  end
+  object Panel2: TPanel
+    Left = 264
+    Height = 536
+    Top = 0
+    Width = 549
+    Align = alClient
+    ClientHeight = 536
+    ClientWidth = 549
+    TabOrder = 2
+    object Panel4: TPanel
+      Left = 1
+      Height = 534
+      Top = 1
+      Width = 218
+      Align = alLeft
+      ClientHeight = 534
+      ClientWidth = 218
+      TabOrder = 0
+      object GroupBox3: TGroupBox
+        Left = 1
+        Height = 58
+        Top = 1
+        Width = 216
+        Align = alTop
+        AutoSize = True
+        Caption = 'Line Controls'
+        ClientHeight = 38
+        ClientWidth = 212
+        TabOrder = 0
+        object Label4: TLabel
+          Left = 0
+          Height = 15
+          Top = 0
+          Width = 212
+          Align = alTop
+          Caption = 'Direction (traget Node ID)'
+        end
+        object edTargetNode: TEdit
+          Left = 0
+          Height = 23
+          Top = 15
+          Width = 212
+          Align = alTop
+          TabOrder = 0
+        end
+      end
+      object GroupBox4: TGroupBox
+        Left = 1
+        Height = 447
+        Top = 59
+        Width = 216
+        Align = alClient
+        Caption = 'Requirements'
+        ClientHeight = 427
+        ClientWidth = 212
+        TabOrder = 1
+        object Label5: TLabel
+          Left = 0
+          Height = 15
+          Top = 0
+          Width = 212
+          Align = alTop
+          Caption = 'Strength'
+        end
+        object edStrReq: TEdit
+          Left = 0
+          Height = 23
+          Top = 15
+          Width = 212
+          Align = alTop
+          TabOrder = 0
+          Text = '0'
+        end
+        object Label6: TLabel
+          Left = 0
+          Height = 15
+          Top = 38
+          Width = 212
+          Align = alTop
+          Caption = 'Agility'
+        end
+        object edAgiReq: TEdit
+          Left = 0
+          Height = 23
+          Top = 53
+          Width = 212
+          Align = alTop
+          TabOrder = 1
+          Text = '0'
+        end
+        object Label7: TLabel
+          Left = 0
+          Height = 15
+          Top = 76
+          Width = 212
+          Align = alTop
+          Caption = 'Speed'
+        end
+        object edSpdReq: TEdit
+          Left = 0
+          Height = 23
+          Top = 91
+          Width = 212
+          Align = alTop
+          TabOrder = 2
+          Text = '0'
+        end
+        object Label8: TLabel
+          Left = 0
+          Height = 15
+          Top = 114
+          Width = 212
+          Align = alTop
+          Caption = 'Intelligence'
+        end
+        object edIntReq: TEdit
+          Left = 0
+          Height = 23
+          Top = 129
+          Width = 212
+          Align = alTop
+          TabOrder = 3
+          Text = '0'
+        end
+        object Panel5: TPanel
+          Left = 0
+          Height = 275
+          Top = 152
+          Width = 212
+          Align = alClient
+          ClientHeight = 275
+          ClientWidth = 212
+          TabOrder = 4
+          object Panel6: TPanel
+            Left = 1
+            Height = 273
+            Top = 1
+            Width = 103
+            Align = alLeft
+            ClientHeight = 273
+            ClientWidth = 103
+            TabOrder = 0
+            object edPerkList: TListBox
+              Left = 1
+              Height = 183
+              Top = 89
+              Width = 101
+              Align = alClient
+              ItemHeight = 0
+              TabOrder = 0
+            end
+            object Label9: TLabel
+              Left = 1
+              Height = 15
+              Top = 1
+              Width = 101
+              Align = alTop
+              Caption = 'Perks'
+            end
+            object Panel8: TPanel
+              Left = 1
+              Height = 50
+              Top = 39
+              Width = 101
+              Align = alTop
+              ClientHeight = 50
+              ClientWidth = 101
+              TabOrder = 1
+              object bAddPerkReq: TButton
+                Left = 1
+                Height = 48
+                Top = 1
+                Width = 51
+                Align = alLeft
+                Caption = 'Add'
+                TabOrder = 0
+              end
+              object bRemPerkReq: TButton
+                Left = 52
+                Height = 48
+                Top = 1
+                Width = 48
+                Align = alClient
+                Caption = 'Remove'
+                TabOrder = 1
+              end
+            end
+            object edPerkNo: TEdit
+              Left = 1
+              Height = 23
+              Top = 16
+              Width = 101
+              Align = alTop
+              TabOrder = 2
+              Text = '0'
+            end
+          end
+          object Panel7: TPanel
+            Left = 104
+            Height = 273
+            Top = 1
+            Width = 107
+            Align = alClient
+            ClientHeight = 273
+            ClientWidth = 107
+            TabOrder = 1
+            object edFlagList: TListBox
+              Left = 1
+              Height = 183
+              Top = 89
+              Width = 105
+              Align = alClient
+              ItemHeight = 0
+              TabOrder = 0
+            end
+            object Label10: TLabel
+              Left = 1
+              Height = 15
+              Top = 1
+              Width = 105
+              Align = alTop
+              Caption = 'Flags'
+            end
+            object Panel9: TPanel
+              Left = 1
+              Height = 50
+              Top = 39
+              Width = 105
+              Align = alTop
+              ClientHeight = 50
+              ClientWidth = 105
+              TabOrder = 1
+              object bAddFlagReq: TButton
+                Left = 1
+                Height = 48
+                Top = 1
+                Width = 51
+                Align = alLeft
+                Caption = 'Add'
+                TabOrder = 0
+              end
+              object bRemFlagReq: TButton
+                Left = 52
+                Height = 48
+                Top = 1
+                Width = 52
+                Align = alClient
+                Caption = 'Remove'
+                TabOrder = 1
+              end
+            end
+            object edFlagNo: TEdit
+              Left = 1
+              Height = 23
+              Top = 16
+              Width = 105
+              Align = alTop
+              TabOrder = 2
+              Text = '0'
+            end
+          end
+        end
+      end
+      object Panel10: TPanel
+        Left = 1
+        Height = 27
+        Top = 506
+        Width = 216
+        Align = alBottom
+        AutoSize = True
+        ClientHeight = 27
+        ClientWidth = 216
+        TabOrder = 2
+        object bUpdateLine: TButton
+          Left = 1
+          Height = 25
+          Top = 1
+          Width = 214
+          Align = alTop
+          Caption = 'Update Line'
+          OnClick = bUpdateLineClick
+          TabOrder = 0
+        end
+      end
+    end
+    object memoULine: TMemo
+      Left = 219
+      Height = 534
+      Top = 1
+      Width = 329
+      Align = alClient
+      ScrollBars = ssVertical
+      TabOrder = 1
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 776
+    Top = 8
+    object MenuItem1: TMenuItem
+      Caption = 'File'
+      object miSave: TMenuItem
+        Caption = 'Save'
+        ShortCut = 16467
+        OnClick = miSaveClick
+      end
+      object miOpen: TMenuItem
+        Caption = 'Open'
+        ShortCut = 16463
+        OnClick = miOpenClick
+      end
+    end
+  end
+  object SelectDirectoryDialog1: TSelectDirectoryDialog
+    Left = 680
+    Top = 8
+  end
+end

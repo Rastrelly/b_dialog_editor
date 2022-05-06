@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="pbdialogeditor.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udialogeditor.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="175"/>
+        <CursorPos X="40" Y="192"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="85" Column="17" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="125" Column="16" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="127" Column="64" TopLine="106"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="71" Column="19" TopLine="48"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="113" Column="12" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="118" Column="8" TopLine="99"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="155" Column="18" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="138" Column="114" TopLine="123"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="115" Column="20" TopLine="107"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="195" Column="3" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="201" Column="14" TopLine="194"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="207" Column="3" TopLine="195"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="205" Column="29" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="176" Column="12" TopLine="146"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="179" Column="8" TopLine="163"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="185" Column="3" TopLine="171"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="239" Column="14" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="191" Column="16" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="188" Column="18" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="197" Column="24" TopLine="191"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="176" Column="7" TopLine="165"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="185" Column="53" TopLine="167"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="197" Column="51" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="136" Column="15" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="28" Column="33" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="137" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="134" Column="66" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="267" Column="23" TopLine="257"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="254" Column="12" TopLine="251"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="192" Column="34" TopLine="171"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
