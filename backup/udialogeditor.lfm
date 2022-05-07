@@ -35,13 +35,13 @@ object Form1: TForm1
     TabOrder = 1
     object GroupBox1: TGroupBox
       Left = 1
-      Height = 325
+      Height = 329
       Top = 1
       Width = 262
       Align = alTop
       AutoSize = True
       Caption = 'Main Attributes'
-      ClientHeight = 305
+      ClientHeight = 309
       ClientWidth = 258
       TabOrder = 0
       object Label1: TLabel
@@ -52,18 +52,10 @@ object Form1: TForm1
         Align = alTop
         Caption = 'Node ID'
       end
-      object edNodeId: TEdit
-        Left = 0
-        Height = 23
-        Top = 15
-        Width = 258
-        Align = alTop
-        TabOrder = 0
-      end
       object Label2: TLabel
         Left = 0
         Height = 15
-        Top = 38
+        Top = 80
         Width = 258
         Align = alTop
         Caption = 'Node Text'
@@ -71,16 +63,16 @@ object Form1: TForm1
       object memoNodeText: TMemo
         Left = 0
         Height = 195
-        Top = 53
+        Top = 95
         Width = 258
         Align = alTop
         ScrollBars = ssVertical
-        TabOrder = 1
+        TabOrder = 0
       end
       object Label3: TLabel
         Left = 0
         Height = 15
-        Top = 248
+        Top = 42
         Width = 258
         Align = alTop
         Caption = 'Portrait ID'
@@ -88,34 +80,63 @@ object Form1: TForm1
       object edPortId: TEdit
         Left = 0
         Height = 23
-        Top = 263
+        Top = 57
         Width = 258
         Align = alTop
-        TabOrder = 2
+        TabOrder = 1
       end
       object cbCanLeave: TCheckBox
         Left = 0
         Height = 19
-        Top = 286
+        Top = 290
         Width = 258
         Align = alTop
         Caption = 'Can Leave'
+        TabOrder = 2
+      end
+      object Panel11: TPanel
+        Left = 0
+        Height = 27
+        Top = 15
+        Width = 258
+        Align = alTop
+        AutoSize = True
+        ClientHeight = 27
+        ClientWidth = 258
         TabOrder = 3
+        object edNodeId: TEdit
+          Left = 1
+          Height = 25
+          Top = 1
+          Width = 191
+          Align = alClient
+          TabOrder = 0
+        end
+        object bLoadNode: TButton
+          Left = 192
+          Height = 25
+          Top = 1
+          Width = 65
+          Align = alRight
+          Caption = 'Load'
+          OnClick = bLoadNodeClick
+          TabOrder = 1
+        end
       end
     end
     object GroupBox2: TGroupBox
       Left = 1
-      Height = 184
-      Top = 326
+      Height = 180
+      Top = 330
       Width = 262
       Align = alClient
       Caption = 'User Lines'
-      ClientHeight = 164
+      ClientHeight = 160
       ClientWidth = 258
       TabOrder = 1
       object lbULines: TListBox
         Left = 0
-        Height = 114
+        Height = 110
         Top = 50
         Width = 258
         Align = alClient
@@ -181,6 +202,7 @@ object Form1: TForm1
       Width = 262
       Align = alBottom
       Caption = 'Save Node'
+      OnClick = bSaveNodeClick
       TabOrder = 2
     end
   end
@@ -204,13 +226,12 @@ object Form1: TForm1
       TabOrder = 0
       object GroupBox3: TGroupBox
         Left = 1
-        Height = 58
+        Height = 119
         Top = 1
         Width = 216
         Align = alTop
-        AutoSize = True
         Caption = 'Line Controls'
-        ClientHeight = 38
+        ClientHeight = 99
         ClientWidth = 212
         TabOrder = 0
         object Label4: TLabel
@@ -219,7 +240,7 @@ object Form1: TForm1
           Top = 0
           Width = 212
           Align = alTop
-          Caption = 'Direction (traget Node ID)'
+          Caption = 'Direction (target Node ID)'
         end
         object edTargetNode: TEdit
           Left = 0
@@ -229,15 +250,32 @@ object Form1: TForm1
           Align = alTop
           TabOrder = 0
         end
+        object memoULine: TMemo
+          Left = 0
+          Height = 46
+          Top = 53
+          Width = 212
+          Align = alClient
+          ScrollBars = ssVertical
+          TabOrder = 1
+        end
+        object Label11: TLabel
+          Left = 0
+          Height = 15
+          Top = 38
+          Width = 212
+          Align = alTop
+          Caption = 'Text'
+        end
       end
       object GroupBox4: TGroupBox
         Left = 1
-        Height = 447
-        Top = 59
+        Height = 386
+        Top = 120
         Width = 216
         Align = alClient
         Caption = 'Requirements'
-        ClientHeight = 427
+        ClientHeight = 366
         ClientWidth = 212
         TabOrder = 1
         object Label5: TLabel
@@ -310,29 +348,30 @@ object Form1: TForm1
         end
         object Panel5: TPanel
           Left = 0
-          Height = 275
+          Height = 214
           Top = 152
           Width = 212
           Align = alClient
-          ClientHeight = 275
+          ClientHeight = 214
           ClientWidth = 212
           TabOrder = 4
           object Panel6: TPanel
             Left = 1
-            Height = 273
+            Height = 212
             Top = 1
             Width = 103
             Align = alLeft
-            ClientHeight = 273
+            ClientHeight = 212
             ClientWidth = 103
             TabOrder = 0
-            object edPerkList: TListBox
+            object lbPerkList: TListBox
               Left = 1
-              Height = 183
-              Top = 89
+              Height = 147
+              Top = 64
               Width = 101
               Align = alClient
               ItemHeight = 0
+              OnClick = lbPerkListClick
               TabOrder = 0
             end
             object Label9: TLabel
@@ -345,29 +384,33 @@ object Form1: TForm1
             end
             object Panel8: TPanel
               Left = 1
-              Height = 50
+              Height = 25
               Top = 39
               Width = 101
               Align = alTop
-              ClientHeight = 50
+              ClientHeight = 25
               ClientWidth = 101
               TabOrder = 1
               object bAddPerkReq: TButton
                 Left = 1
-                Height = 48
+                Height = 23
                 Top = 1
-                Width = 51
+                Width = 48
                 Align = alLeft
+                AutoSize = True
                 Caption = 'Add'
+                OnClick = bAddPerkReqClick
                 TabOrder = 0
               end
               object bRemPerkReq: TButton
-                Left = 52
-                Height = 48
+                Left = 49
+                Height = 23
                 Top = 1
-                Width = 48
+                Width = 51
                 Align = alClient
+                AutoSize = True
                 Caption = 'Remove'
+                OnClick = bRemPerkReqClick
                 TabOrder = 1
               end
             end
@@ -383,20 +426,21 @@ object Form1: TForm1
           end
           object Panel7: TPanel
             Left = 104
-            Height = 273
+            Height = 212
             Top = 1
             Width = 107
             Align = alClient
-            ClientHeight = 273
+            ClientHeight = 212
             ClientWidth = 107
             TabOrder = 1
-            object edFlagList: TListBox
+            object lbFlagList: TListBox
               Left = 1
-              Height = 183
-              Top = 89
+              Height = 146
+              Top = 65
               Width = 105
               Align = alClient
               ItemHeight = 0
+              OnClick = lbFlagListClick
               TabOrder = 0
             end
             object Label10: TLabel
@@ -409,29 +453,33 @@ object Form1: TForm1
             end
             object Panel9: TPanel
               Left = 1
-              Height = 50
+              Height = 26
               Top = 39
               Width = 105
               Align = alTop
-              ClientHeight = 50
+              ClientHeight = 26
               ClientWidth = 105
               TabOrder = 1
               object bAddFlagReq: TButton
                 Left = 1
-                Height = 48
+                Height = 24
                 Top = 1
-                Width = 51
+                Width = 48
                 Align = alLeft
+                AutoSize = True
                 Caption = 'Add'
+                OnClick = bAddFlagReqClick
                 TabOrder = 0
               end
               object bRemFlagReq: TButton
-                Left = 52
-                Height = 48
+                Left = 49
+                Height = 24
                 Top = 1
-                Width = 52
+                Width = 55
                 Align = alClient
+                AutoSize = True
                 Caption = 'Remove'
+                OnClick = bRemFlagReqClick
                 TabOrder = 1
               end
             end
@@ -469,19 +517,79 @@ object Form1: TForm1
         end
       end
     end
-    object memoULine: TMemo
+    object GroupBox5: TGroupBox
       Left = 219
       Height = 534
       Top = 1
       Width = 329
       Align = alClient
-      ScrollBars = ssVertical
+      Caption = '.nod file list for workfolder'
+      ClientHeight = 514
+      ClientWidth = 325
       TabOrder = 1
+      object Panel12: TPanel
+        Left = 0
+        Height = 162
+        Top = 0
+        Width = 325
+        Align = alTop
+        ClientHeight = 162
+        ClientWidth = 325
+        TabOrder = 0
+        object lFileName: TLabel
+          Left = 1
+          Height = 15
+          Top = 1
+          Width = 323
+          Align = alTop
+          Caption = 'File Name: '
+        end
+        object memoFilePreview: TMemo
+          Left = 1
+          Height = 120
+          Top = 16
+          Width = 323
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssVertical
+          TabOrder = 0
+        end
+        object bOpenFileFromList: TButton
+          Left = 1
+          Height = 25
+          Top = 136
+          Width = 323
+          Align = alBottom
+          Caption = 'OpenThis'
+          OnClick = bOpenFileFromListClick
+          TabOrder = 1
+        end
+      end
+      object lbFiles: TListBox
+        Left = 0
+        Height = 327
+        Top = 162
+        Width = 325
+        Align = alClient
+        ItemHeight = 0
+        OnClick = lbFilesClick
+        TabOrder = 1
+      end
+      object bRefreshFileList: TButton
+        Left = 0
+        Height = 25
+        Top = 489
+        Width = 325
+        Align = alBottom
+        Caption = 'Refresh'
+        OnClick = bRefreshFileListClick
+        TabOrder = 2
+      end
     end
   end
   object MainMenu1: TMainMenu
-    Left = 776
-    Top = 8
+    Left = 728
+    Top = 456
     object MenuItem1: TMenuItem
       Caption = 'File'
       object miSave: TMenuItem
@@ -489,15 +597,31 @@ object Form1: TForm1
         ShortCut = 16467
         OnClick = miSaveClick
       end
-      object miOpen: TMenuItem
+      object MenuItem2: TMenuItem
         Caption = 'Open'
         ShortCut = 16463
+        OnClick = MenuItem2Click
+      end
+      object miOpen: TMenuItem
+        Caption = 'Set Work Folder'
+        ShortCut = 16471
         OnClick = miOpenClick
+      end
+      object MenuItem3: TMenuItem
+        Caption = 'Close'
+        ShortCut = 16465
+        OnClick = MenuItem3Click
       end
     end
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
-    Left = 680
-    Top = 8
+    Left = 608
+    Top = 456
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.nod'
+    Filter = 'Node Files (*.nod)|*.nod|All Files (*.*)|*.*'
+    Left = 512
+    Top = 456
   end
 end

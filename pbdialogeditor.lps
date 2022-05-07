@@ -12,17 +12,18 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="udialogeditor.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="175"/>
-        <CursorPos X="40" Y="192"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="658"/>
+        <CursorPos X="20" Y="675"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -30,123 +31,123 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="85" Column="17" TopLine="72"/>
+        <Caret Line="379" Column="61" TopLine="371"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="125" Column="16" TopLine="106"/>
+        <Caret Line="273" Column="5" TopLine="267"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="127" Column="64" TopLine="106"/>
+        <Caret Line="392" Column="85" TopLine="367"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="71" Column="19" TopLine="48"/>
+        <Caret Line="391" Column="85" TopLine="366"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="113" Column="12" TopLine="81"/>
+        <Caret Line="117" Column="31" TopLine="107"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="118" Column="8" TopLine="99"/>
+        <Caret Line="128" Column="23" TopLine="107"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="155" Column="18" TopLine="122"/>
+        <Caret Line="296" Column="13" TopLine="266"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="138" Column="114" TopLine="123"/>
+        <Caret Line="459" Column="13" TopLine="430"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="115" Column="20" TopLine="107"/>
+        <Caret Line="514" Column="19" TopLine="490"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="195" Column="3" TopLine="193"/>
+        <Caret Line="563" Column="3" TopLine="560"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="201" Column="14" TopLine="194"/>
+        <Caret Line="360" Column="19" TopLine="330"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="207" Column="3" TopLine="195"/>
+        <Caret Line="652" Column="19" TopLine="642"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="205" Column="29" TopLine="169"/>
+        <Caret Line="659" Column="19" TopLine="649"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="176" Column="12" TopLine="146"/>
+        <Caret Line="393" Column="3" TopLine="391"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="179" Column="8" TopLine="163"/>
+        <Caret Line="376" Column="3" TopLine="374"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="185" Column="3" TopLine="171"/>
+        <Caret Line="393" Column="50" TopLine="374"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="239" Column="14" TopLine="218"/>
+        <Caret Line="177" Column="41" TopLine="169"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="191" Column="16" TopLine="174"/>
+        <Caret Line="362" Column="15" TopLine="333"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="188" Column="18" TopLine="158"/>
+        <Caret Line="379" Column="30" TopLine="359"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="197" Column="24" TopLine="191"/>
+        <Caret Line="35" Column="27" TopLine="29"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="176" Column="7" TopLine="165"/>
+        <Caret Line="87" Column="12" TopLine="58"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="185" Column="53" TopLine="167"/>
+        <Caret Line="116" Column="22" TopLine="87"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="197" Column="51" TopLine="179"/>
+        <Caret Line="383" Column="10" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="136" Column="15" TopLine="118"/>
+        <Caret Line="387" Column="61" TopLine="357"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="28" Column="33" TopLine="11"/>
+        <Caret Line="406" Column="85" TopLine="391"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="137" TopLine="119"/>
+        <Caret Line="393" Column="33" TopLine="386"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="134" Column="66" TopLine="119"/>
+        <Caret Line="394" Column="33" TopLine="387"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="267" Column="23" TopLine="257"/>
+        <Caret Line="393" Column="33" TopLine="386"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="254" Column="12" TopLine="251"/>
+        <Caret Line="395" Column="33" TopLine="388"/>
       </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
-        <Caret Line="192" Column="34" TopLine="171"/>
+        <Caret Line="401" Column="15" TopLine="388"/>
       </Position>
     </JumpHistory>
     <RunParams>
