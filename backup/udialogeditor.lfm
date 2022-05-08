@@ -567,7 +567,7 @@ object Form1: TForm1
       end
       object lbFiles: TListBox
         Left = 0
-        Height = 327
+        Height = 302
         Top = 162
         Width = 325
         Align = alClient
@@ -578,12 +578,22 @@ object Form1: TForm1
       object bRefreshFileList: TButton
         Left = 0
         Height = 25
-        Top = 489
+        Top = 464
         Width = 325
         Align = alBottom
         Caption = 'Refresh'
         OnClick = bRefreshFileListClick
         TabOrder = 2
+      end
+      object Button1: TButton
+        Left = 0
+        Height = 25
+        Top = 489
+        Width = 325
+        Align = alBottom
+        Caption = 'Generate Node List'
+        OnClick = Button1Click
+        TabOrder = 3
       end
     end
   end

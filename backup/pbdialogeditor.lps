@@ -21,26 +21,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="388"/>
-        <CursorPos X="15" Y="401"/>
+        <TopLine Value="401"/>
+        <CursorPos X="56" Y="403"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="udialogeditor.pas"/>
-        <Caret Line="279" Column="45" TopLine="260"/>
-      </Position>
-      <Position>
-        <Filename Value="udialogeditor.pas"/>
-        <Caret Line="379" Column="61" TopLine="371"/>
-      </Position>
-      <Position>
-        <Filename Value="udialogeditor.pas"/>
-        <Caret Line="273" Column="5" TopLine="267"/>
-      </Position>
       <Position>
         <Filename Value="udialogeditor.pas"/>
         <Caret Line="392" Column="85" TopLine="367"/>
@@ -148,6 +136,18 @@
       <Position>
         <Filename Value="udialogeditor.pas"/>
         <Caret Line="395" Column="33" TopLine="388"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="401" Column="15" TopLine="388"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="662" Column="17" TopLine="658"/>
+      </Position>
+      <Position>
+        <Filename Value="udialogeditor.pas"/>
+        <Caret Line="669" Column="17" TopLine="665"/>
       </Position>
     </JumpHistory>
     <RunParams>

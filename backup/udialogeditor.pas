@@ -54,6 +54,7 @@ type
     bLoadNode: TButton;
     bRefreshFileList: TButton;
     bOpenFileFromList: TButton;
+    Button1: TButton;
     cbCanLeave: TCheckBox;
     edNodeId: TEdit;
     edPortId: TEdit;
@@ -110,6 +111,7 @@ type
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     StatusBar1: TStatusBar;
     procedure bOpenFileFromListClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure RefreshFileList;
     procedure GetFileList;
@@ -396,6 +398,11 @@ begin
   OpenNode(workfolder+'\'+lbFiles.Items[lbFiles.ItemIndex]);
 end;
 
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  lbFiles.Items.SaveToFile(workfolder+'\nodelist.txt');
+end;
+
 procedure TForm1.MenuItem3Click(Sender: TObject);
 begin
   Form1.Close;
@@ -672,7 +679,11 @@ begin
   if (MessageDlg('Confirm','Are you sure you want to quit?',mtConfirmation,mbOKCancel,0,mbOk)=mrOK) then
   begin
     SaveSettings;
-    Application.Terminate;
+    CanClose:=true;
+  end
+  else
+  begin
+    CanClose:=false;
   end;
 end;
 

@@ -54,6 +54,7 @@ type
     bLoadNode: TButton;
     bRefreshFileList: TButton;
     bOpenFileFromList: TButton;
+    bGenNodeList: TButton;
     cbCanLeave: TCheckBox;
     edNodeId: TEdit;
     edPortId: TEdit;
@@ -110,6 +111,7 @@ type
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     StatusBar1: TStatusBar;
     procedure bOpenFileFromListClick(Sender: TObject);
+    procedure bGenNodeListClick(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure RefreshFileList;
     procedure GetFileList;
@@ -394,6 +396,11 @@ procedure TForm1.bOpenFileFromListClick(Sender: TObject);
 begin
   if (lbFiles.ItemIndex>=0) then
   OpenNode(workfolder+'\'+lbFiles.Items[lbFiles.ItemIndex]);
+end;
+
+procedure TForm1.bGenNodeListClick(Sender: TObject);
+begin
+  lbFiles.Items.SaveToFile(workfolder+'\nodelist.txt');
 end;
 
 procedure TForm1.MenuItem3Click(Sender: TObject);
