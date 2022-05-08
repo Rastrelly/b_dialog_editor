@@ -23,6 +23,14 @@ type
     public
         nodeid,nodetext,portid:string;
         canleave:boolean;
+
+        givemoney:integer;
+        givexp:integer;
+        itemsg,itemst:string;
+        flagson,flagsoff:string;
+        perksg,perkst:string;
+        ujournal:string;
+
         actul,actperk,actflag:integer;
 
         ulines:array of uline;
@@ -54,8 +62,16 @@ type
     bLoadNode: TButton;
     bRefreshFileList: TButton;
     bOpenFileFromList: TButton;
-    Button1: TButton;
+    bGenNodeList: TButton;
     cbCanLeave: TCheckBox;
+    edMoney: TEdit;
+    edGiveItems: TEdit;
+    edTakeItems: TEdit;
+    edFlagsOn: TEdit;
+    edFlagsOff: TEdit;
+    edGivePerks: TEdit;
+    edTakePerks: TEdit;
+    edGiveXP: TEdit;
     edNodeId: TEdit;
     edPortId: TEdit;
     edTargetNode: TEdit;
@@ -70,9 +86,19 @@ type
     GroupBox3: TGroupBox;
     GroupBox4: TGroupBox;
     GroupBox5: TGroupBox;
+    GroupBox6: TGroupBox;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
     lFileName: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -87,6 +113,7 @@ type
     lbFlagList: TListBox;
     lbFiles: TListBox;
     MainMenu1: TMainMenu;
+    memoJournal: TMemo;
     memoFilePreview: TMemo;
     memoNodeText: TMemo;
     memoULine: TMemo;
@@ -100,6 +127,7 @@ type
     Panel10: TPanel;
     Panel11: TPanel;
     Panel12: TPanel;
+    Panel13: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -111,7 +139,7 @@ type
     SelectDirectoryDialog1: TSelectDirectoryDialog;
     StatusBar1: TStatusBar;
     procedure bOpenFileFromListClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure bGenNodeListClick(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
     procedure RefreshFileList;
     procedure GetFileList;
@@ -298,6 +326,15 @@ begin
       portid:=edPortId.Text;
       nodetext:=memoNodeText.Text;
       canleave:=cbCanLeave.Checked;
+      givemoney:=strtoint(edMoney.text);
+      givexp:=strtoint(edGiveXP.text);
+      ujournal:=memoJournal.Text;
+      itemsg:=edGiveItems.Text;
+      itemst:=edTakeItems.Text;
+      perksg:=edGivePerks.Text;
+      perkst:=edTakePerks.Text;
+      flagson:=edFlagsOn.Text;
+      flagsoff:=edFlagsOff.Text;
     end;
     UpdateUI;
 end;
@@ -358,7 +395,15 @@ begin
         WriteLn(nodefile,inttostr(ulines[i].flagreq[j]));
       end;
     end;
-
+    WriteLn(nodefile,inttostr(givemoney));
+    WriteLn(nodefile,itemsg);
+    WriteLn(nodefile,itemst);
+    WriteLn(nodefile,flagson);
+    WriteLn(nodefile,flagsoff);
+    WriteLn(nodefile,perksg);
+    WriteLn(nodefile,perkst);
+    WriteLn(nodefile,inttostr(givexp));
+    WriteLn(nodefile,ujournal);
   end;
 
   closefile(nodefile);
@@ -398,7 +443,7 @@ begin
   OpenNode(workfolder+'\'+lbFiles.Items[lbFiles.ItemIndex]);
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.bGenNodeListClick(Sender: TObject);
 begin
   lbFiles.Items.SaveToFile(workfolder+'\nodelist.txt');
 end;
@@ -476,6 +521,17 @@ begin
              ulines[i].flagreq[j]:=strtoint(ts);
            end;
          end;
+         ReadLn(nodefile,ts);
+         givemoney:=strtoint(ts);
+         ReadLn(nodefile,itemsg);
+         ReadLn(nodefile,itemst);
+         ReadLn(nodefile,flagson);
+         ReadLn(nodefile,flagsoff);
+         ReadLn(nodefile,perksg);
+         ReadLn(nodefile,perkst);
+         ReadLn(nodefile,ts);
+         givexp:=strtoint(ts);
+         ReadLn(nodefile,ujournal);
     end;
 
     CloseFile(nodefile);
@@ -494,6 +550,16 @@ begin
   edPortId.Text:=cnode.portid;
   memoNodeText.Text:=cnode.nodetext;
   cbCanLeave.Checked:=cnode.canleave;
+
+  edMoney.Text:=inttostr(cnode.givemoney);
+  edGiveItems.Text:=cnode.itemsg;
+  edTakeItems.Text:=cnode.itemst;
+  edGivePerks.Text:=cnode.perksg;
+  edTakePerks.Text:=cnode.perkst;
+  edFlagsOn.Text:=cnode.flagson;
+  edFlagsOff.Text:=cnode.flagsoff;
+  edGiveXP.Text:=inttostr(cnode.givexp);
+  memoJournal.Text:=cnode.ujournal;
 
   //user line list
   ull:=length(cnode.ulines);
