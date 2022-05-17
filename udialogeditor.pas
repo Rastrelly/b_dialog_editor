@@ -14,7 +14,7 @@ type
 
   uline = record
     tdir,text:string;
-    strreq,agireq,spdreq,intreq:integer;
+    strreq,agireq,spdreq,intreq,moneyreq:integer;
     perkreq:array of integer;
     flagreq:array of integer;
   end;
@@ -64,6 +64,7 @@ type
     bOpenFileFromList: TButton;
     bGenNodeList: TButton;
     cbCanLeave: TCheckBox;
+    edMoneyReq: TEdit;
     edMoney: TEdit;
     edGiveItems: TEdit;
     edTakeItems: TEdit;
@@ -99,6 +100,7 @@ type
     Label18: TLabel;
     Label19: TLabel;
     Label20: TLabel;
+    Label21: TLabel;
     lFileName: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -377,6 +379,7 @@ begin
       WriteLn(nodefile,inttostr(ulines[i].agireq));
       WriteLn(nodefile,inttostr(ulines[i].spdreq));
       WriteLn(nodefile,inttostr(ulines[i].intreq));
+      WriteLn(nodefile,inttostr(ulines[i].moneyreq));
       //now recording perks and flags by the same principle
       //perks
       pl:=Length(ulines[i].perkreq);
@@ -503,6 +506,8 @@ begin
            ReadLn(nodefile,ts);
            ulines[i].intreq:=strtoint(ts);
            ReadLn(nodefile,ts);
+           ulines[i].moneyreq:=strtoint(ts);
+           ReadLn(nodefile,ts);
            pl:=strtoint(ts);
            SetLength(ulines[i].perkreq,pl);
            if (pl>0) then
@@ -583,6 +588,7 @@ begin
     edAgiReq.Text:=inttostr(cnode.ulines[cnode.actul].agireq);
     edSpdReq.Text:=inttostr(cnode.ulines[cnode.actul].spdreq);
     edIntReq.Text:=inttostr(cnode.ulines[cnode.actul].intreq);
+    edMoneyReq.Text:=inttostr(cnode.ulines[cnode.actul].moneyreq);
   end;
 
   if (ull>0) and (cnode.actul<ull) then
@@ -620,6 +626,7 @@ begin
       agireq:=strtoint(edAgiReq.Text);
       spdreq:=strtoint(edSpdReq.Text);
       intreq:=strtoint(edIntReq.Text);
+      moneyreq:=strtoint(edMoneyReq.Text);
     end;
 
     UpdateUI;

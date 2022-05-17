@@ -14,7 +14,7 @@ type
 
   uline = record
     tdir,text:string;
-    strreq,agireq,spdreq,intreq:integer;
+    strreq,agireq,spdreq,intreq,moneyreq:integer;
     perkreq:array of integer;
     flagreq:array of integer;
   end;
@@ -64,6 +64,7 @@ type
     bOpenFileFromList: TButton;
     bGenNodeList: TButton;
     cbCanLeave: TCheckBox;
+    edMoneyReq: TEdit;
     edMoney: TEdit;
     edGiveItems: TEdit;
     edTakeItems: TEdit;
@@ -99,6 +100,7 @@ type
     Label18: TLabel;
     Label19: TLabel;
     Label20: TLabel;
+    Label21: TLabel;
     lFileName: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -521,6 +523,7 @@ begin
              ulines[i].flagreq[j]:=strtoint(ts);
            end;
          end;
+         try
          ReadLn(nodefile,ts);
          givemoney:=strtoint(ts);
          ReadLn(nodefile,itemsg);
@@ -532,6 +535,9 @@ begin
          ReadLn(nodefile,ts);
          givexp:=strtoint(ts);
          ReadLn(nodefile,ujournal);
+         except
+           //this section just for comfort; not needed for final
+         end;
     end;
 
     CloseFile(nodefile);
@@ -579,6 +585,7 @@ begin
     edAgiReq.Text:=inttostr(cnode.ulines[cnode.actul].agireq);
     edSpdReq.Text:=inttostr(cnode.ulines[cnode.actul].spdreq);
     edIntReq.Text:=inttostr(cnode.ulines[cnode.actul].intreq);
+    edMoneyReq.Text:=inttostr(cnode.ulines[cnode.actul].moneyreq);
   end;
 
   if (ull>0) and (cnode.actul<ull) then
@@ -616,6 +623,7 @@ begin
       agireq:=strtoint(edAgiReq.Text);
       spdreq:=strtoint(edSpdReq.Text);
       intreq:=strtoint(edIntReq.Text);
+      moneyreq:=strtoint(edMoneyReq.Text);
     end;
 
     UpdateUI;
